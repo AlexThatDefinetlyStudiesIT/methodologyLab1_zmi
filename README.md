@@ -19,6 +19,6 @@
 
 Чтобы посмотреть записи asciinema, перейдите по следующим ссылкам:
 
-- [NOK Game Recording](https://asciinema.org/a/lJP2wdFcKCYtIGwTLO9c212NG)
-- [Geometrical Progression Game Recording](https://asciinema.org/a/1nsQS3DE4BtYMMaDFpC0YbYIb)
+- [NOK Game Recording](https://asciinema.org/a/r0nIH2Qp9i1mCE7iBewOLJV7D)
+- [Geometrical Progression Game Recording](https://asciinema.org/a/vbMHfNY359ks2PTpP3f4cZOcP)
 
