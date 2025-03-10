@@ -9,3 +9,13 @@ export function RNGMore(min, max, amount) {
   }
   return randomNumbers;
 }
+
+export function checkAnswer(userAnswer, correctAnswer, playerName) {
+  if (parseInt(userAnswer, 10) === correctAnswer) {
+    console.log('Correct!');
+    console.log(`Congratulations, ${playerName}!`);
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${playerName}!`);
+  }
+}

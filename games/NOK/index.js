@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { RNGMore } from '../RNG.js';
+import { RNGMore, checkAnswer } from '../RNG.js';
 
 function gcd2(a, b) {
   if (!b) return b === 0 ? a : NaN;
@@ -28,14 +28,7 @@ function NOKGame(playerName) {
 
   const correctAnswer = gcd(RN3);
 
-  if (parseInt(userAnswer, 10) === correctAnswer) {
-    console.log('Correct!');
-
-    console.log(`Congratulations, ${playerName}!`);
-  } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${playerName}!`);
-  }
+  checkAnswer(userAnswer, correctAnswer, playerName);
 }
 
 export default NOKGame;

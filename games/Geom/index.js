@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { RNG1 } from '../RNG.js';
+import { RNG1, checkAnswer } from '../RNG.js';
 
 function askQuestion(question) {
   return readlineSync.question(question);
@@ -25,13 +25,7 @@ function GeomGame(playerName) {
   }
   console.log(questionText);
   const userAnswer = askQuestion('Your answer: ');
-  if (parseInt(userAnswer, 10) === correctAnswer) {
-    console.log('Correct!');
-    console.log(`Congratulations, ${playerName}!`);
-  } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    console.log(`Let's try again, ${playerName}!`);
-  }
+  checkAnswer(userAnswer, correctAnswer, playerName);
 }
 
 export default GeomGame;
