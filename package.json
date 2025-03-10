@@ -7,5 +7,10 @@
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "start": "node games/index.js",
+    "linter": "npx eslint ./games --ext .js",
+    "linter:fix": "npx eslint ./games --ext .js --fix"
+  }
 }

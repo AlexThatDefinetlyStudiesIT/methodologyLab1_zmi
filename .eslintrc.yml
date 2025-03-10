@@ -11,3 +11,5 @@ plugins:
 rules:
   no-console: off
   import/export: off
+  no-plusplus: off
+  import/extensions: ["error", "ignorePackages", { "js": "always" }]
