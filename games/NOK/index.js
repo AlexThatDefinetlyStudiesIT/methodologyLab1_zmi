@@ -30,6 +30,7 @@ function NOKGame(playerName) {
 
   if (parseInt(userAnswer, 10) === correctAnswer) {
     console.log('Correct!');
+
     console.log(`Congratulations, ${playerName}!`);
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
