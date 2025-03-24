@@ -5,21 +5,23 @@ import GeomGame from './Geom/index.js';
 let playerName = '';
 
 function chooseGame() {
-  while (true) {
-    const gameChoice = readlineSync.question('Choose a game: 1 - NOK, 2 - Geometrical Progression');
+  const validChoices = { 1: NOKGame, 2: GeomGame };
 
-    if (gameChoice === '1' || gameChoice === '2') {
+  while (true) {
+    const gameChoice = readlineSync.question(
+      'Choose a game: 1 - NOK, 2 - Geometrical Progression',
+    );
+
+    const selectedGame = validChoices[gameChoice];
+
+    if (selectedGame) {
       for (let i = 0; i < 3; i++) {
-        if (gameChoice === '1') {
-          NOKGame(playerName);
-        } else {
-          GeomGame(playerName);
-        }
+        selectedGame(playerName);
       }
-      break;
-    } else {
-      console.log('Invalid choice, please select 1 or 2.');
+      return;
     }
+
+    console.log('Invalid choice, please select 1 or 2.');
   }
 }
 
