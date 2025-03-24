@@ -6,22 +6,17 @@ let playerName = '';
 
 function chooseGame() {
   const validChoices = { 1: NOKGame, 2: GeomGame };
-
-  while (true) {
-    const gameChoice = readlineSync.question(
+  let gameChoice;
+  do {
+    gameChoice = readlineSync.question(
       'Choose a game: 1 - NOK, 2 - Geometrical Progression \n',
     );
-
-    const selectedGame = validChoices[gameChoice];
-
-    if (selectedGame) {
-      for (let i = 0; i < 3; i++) {
-        selectedGame(playerName);
-      }
-      return;
+    if (!validChoices[gameChoice]) {
+      console.log('Invalid choice, please select 1 or 2.');
     }
-
-    console.log('Invalid choice, please select 1 or 2.');
+  } while (!validChoices[gameChoice]);
+  for (let i = 0; i < 3; i++) {
+    validChoices[gameChoice](playerName);
   }
 }
 
