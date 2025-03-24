@@ -1,15 +1,7 @@
 import readlineSync from 'readline-sync';
 
-export function RNG1(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-export function RNGMore(min, max, amount) {
-  const randomNumbers = [];
-  for (let i = 0; i < amount; i++) {
-    randomNumbers.push(RNG1(min, max));
-  }
-  return randomNumbers;
+export function askQuestion(question) {
+  return readlineSync.question(question);
 }
 
 export function checkAnswer(userAnswer, correctAnswer, playerName) {
@@ -22,6 +14,14 @@ export function checkAnswer(userAnswer, correctAnswer, playerName) {
   }
 }
 
-export function askQuestion(question) {
-  return readlineSync.question(question);
+export function RNG1(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+export function RNGMore(min, max, amount) {
+  const randomNumbers = [];
+  for (let i = 0; i < amount; i++) {
+    randomNumbers.push(RNG1(min, max));
+  }
+  return randomNumbers;
 }

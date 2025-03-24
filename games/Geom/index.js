@@ -1,4 +1,4 @@
-import { RNG1, askQuestion, checkAnswer } from '../gameLogic.js';
+import { RNG1, askQuestion, checkAnswer } from '../../gameEngine/gameUtils.js';
 
 function GeomGame(playerName) {
   console.log('What number is missing in the progression?');

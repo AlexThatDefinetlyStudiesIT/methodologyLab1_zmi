@@ -1,4 +1,4 @@
-import { RNGMore, askQuestion, checkAnswer } from '../gameLogic.js';
+import { RNGMore, askQuestion, checkAnswer } from '../../gameEngine/gameUtils.js';
 
 function gcd2(a, b) {
   if (!b) return b === 0 ? a : NaN;

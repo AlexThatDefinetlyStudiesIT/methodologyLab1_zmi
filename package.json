@@ -9,8 +9,8 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node games/index.js",
-    "linter": "npx eslint ./games --ext .js",
-    "linter:fix": "npx eslint ./games --ext .js --fix"
+    "start": "node gameEngine/gameLogic.js",
+    "linter": "npx eslint ./ --ext .js",
+    "linter:fix": "npx eslint ./ --ext .js --fix"
   }
 }

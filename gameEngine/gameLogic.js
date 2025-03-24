@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import NOKGame from './NOK/index.js';
-import GeomGame from './Geom/index.js';
+import NOKGame from '../games/NOK/index.js';
+import GeomGame from '../games/Geom/index.js';
 
 let playerName = '';
 
@@ -9,7 +9,7 @@ function chooseGame() {
 
   while (true) {
     const gameChoice = readlineSync.question(
-      'Choose a game: 1 - NOK, 2 - Geometrical Progression',
+      'Choose a game: 1 - NOK, 2 - Geometrical Progression \n',
     );
 
     const selectedGame = validChoices[gameChoice];
