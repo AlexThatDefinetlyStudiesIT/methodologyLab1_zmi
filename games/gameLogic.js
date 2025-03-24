@@ -1,3 +1,5 @@
+import readlineSync from 'readline-sync';
+
 export function RNG1(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -18,4 +20,8 @@ export function checkAnswer(userAnswer, correctAnswer, playerName) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${playerName}!`);
   }
+}
+
+export function askQuestion(question) {
+  return readlineSync.question(question);
 }

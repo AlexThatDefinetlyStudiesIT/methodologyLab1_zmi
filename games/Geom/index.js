@@ -1,9 +1,4 @@
-import readlineSync from 'readline-sync';
-import { RNG1, checkAnswer } from '../RNG.js';
-
-function askQuestion(question) {
-  return readlineSync.question(question);
-}
+import { RNG1, askQuestion, checkAnswer } from '../gameLogic.js';
 
 function GeomGame(playerName) {
   console.log('What number is missing in the progression?');
