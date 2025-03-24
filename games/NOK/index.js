@@ -1,4 +1,3 @@
-
 import { RNGMore, askQuestion, checkAnswer } from '../gameLogic.js';
 
 function gcd2(a, b) {
@@ -13,8 +12,6 @@ function lcm2(a, b) {
 function lcm(arr) {
   return arr.reduce((acc, num) => lcm2(acc, num), 1);
 }
-
-
 
 function NOKGame(playerName) {
   console.log('Find the smallest common multiple of given numbers.');

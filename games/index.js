@@ -6,18 +6,16 @@ let playerName = '';
 
 function chooseGame() {
   const gameChoice = readlineSync.question('Choose a game: 1 - NOK, 2 - Geom: ');
-
-  if (gameChoice === '1') {
-    for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
+    if (gameChoice === '1') {
       NOKGame(playerName);
-    }
-  } else if (gameChoice === '2') {
-    for (let i = 0; i < 3; i++) {
+    } else if (gameChoice === '2') {
       GeomGame(playerName);
+    } else {
+      console.log('Invalid choice, please select 1 or 2.');
+      chooseGame();
+      break;
     }
-  } else {
-    console.log('Invalid choice, please select 1 or 2.');
-    chooseGame();
   }
 }
 
